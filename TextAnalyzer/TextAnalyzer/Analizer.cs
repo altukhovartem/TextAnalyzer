@@ -6,14 +6,11 @@ using System.Threading.Tasks;
 
 namespace TextAnalyzer
 {
-    interface TextAnalyzer
+    static class Analizer
     {
-        Label ProcessText(String text);
-    }
+        public static void CheckLbels()
+        {
 
-    public enum Label
-    {
-        SPAM, NEGATIVE_TEXT, TOO_LONG, OK
+        }
     }
-
 }

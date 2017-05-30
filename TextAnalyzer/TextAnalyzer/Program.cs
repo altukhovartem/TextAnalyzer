@@ -10,6 +10,10 @@ namespace TextAnalyzer
     {
         static void Main(string[] args)
         {
+            Analizer.CheckLbels();
+
+            TextAnalyzer test = new NegativeTextAnalyzer();
+            Console.WriteLine(test.ProcessText("qweqweqwe : (asd"));
         }
     }
 }

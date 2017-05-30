@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TextAnalyzer
 {
-    class TooLongTextAnalyzer: TextAnalyzer
+    class TooLongTextAnalyzer
     {
     }
 }
