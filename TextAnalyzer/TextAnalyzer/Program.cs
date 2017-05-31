@@ -10,10 +10,15 @@ namespace TextAnalyzer
     {
         static void Main(string[] args)
         {
-            Analizer.CheckLbels();
+            TextAnalyzer[] listOfAnalyzers = new TextAnalyzer[]
+            {
+                new NegativeTextAnalyzer(),
+                new SpamAnalyzer(new List<string>() {"idi", "suda", "govno", "sobachye" }),
+                new TooLongTextAnalyzer(10)
+            };
 
-            TextAnalyzer test = new NegativeTextAnalyzer();
-            Console.WriteLine(test.ProcessText("qweqweqwe : (asd"));
+            Label currentLabel = Analizer.CheckLabels(listOfAnalyzers, "11111111111111111111111govno");
+            Console.WriteLine(currentLabel);
         }
     }
 }
